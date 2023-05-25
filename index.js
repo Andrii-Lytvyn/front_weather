@@ -1,6 +1,11 @@
 //const jokeElement = document.getElementById("newJoke");
 
 async function getIP() {
+    // const flag = await fetch("https://ip-api.io/")
+    // const flagObj = await flag.json();
+    // let flagUrl = flagObj.flagUrl;
+    // console.log(flagUrl);
+
     const item = await fetch("https://get.geojs.io/v1/ip/geo.json");
     const obj = await item.json();
     const latitude = obj.latitude;
@@ -73,6 +78,11 @@ async function getIP() {
     document.getElementById("windspeed").innerHTML = weatherObj.current_weather.windspeed;
     document.getElementById("currentWeather").innerHTML = textWeather;
     document.getElementById("country").innerHTML = obj.country;
+
+
+
+
+
 }
 
 getIP();
